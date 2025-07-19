@@ -1,0 +1,22 @@
+{
+  "name": "nft-market-place",
+  "version": "1.0.0",
+  "description": "I'm starting a big project on my own.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch sass/main.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Oava-oava/nft-market-place.git"
+  },
+  "author": "Ortiqbek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Oava-oava/nft-market-place/issues"
+  },
+  "homepage": "https://github.com/Oava-oava/nft-market-place#readme",
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

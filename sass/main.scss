@@ -1,0 +1,157 @@
+// Global styles
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Font Sizes
+$fs-small: 1.2rem;
+$fs-regular: 1.6rem;
+$fs-medium: 2.2rem;
+$fs-medium-large: 2.8rem;
+$fs-large-medium: 3.8rem;
+
+$clr-primary: #a259ff;
+$clr-dark: #2b2b2b;
+$clr-white: #ffffff;
+$clr-dark-gray: #2b2b2b;
+$clr-medium-gray: #3b3b3b;
+$clr-light-gray: #858584;
+
+$btn-radius: 20px;
+
+$ff-space-mono: "Space Mono", monospace;
+$ff-Work-sans: "Work Sans", sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: $clr-white;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  background-color: $clr-dark;
+  color: $clr-white;
+  font-family: $ff-Work-sans;
+}
+
+/* HEADER SECTION */
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* KEYINROQ OLIB TASHLASHIMIZ MUMKIN */
+
+  padding: 2rem 5rem;
+  max-width: 1280px;
+  margin-inline: auto;
+
+  /* ********************************* */
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    font-size: $fs-regular;
+    font-weight: 600;
+    line-height: 1.4;
+    padding: 2rem;
+  }
+
+  &__btn {
+    display: flex;
+    background-color: #a259ff;
+    gap: 1rem;
+    padding: 2rem 3rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 20px;
+  }
+}
+
+/*
+Font-size 
+  - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+// // Navbar
+// .navbar {
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+
+//   &__logo {
+//     display: flex;
+//     align-items: center;
+//     gap: 1rem;
+//   }
+
+//   &__site-name {
+//     font-size: 2rem;
+//     font-weight: bold;
+//     color: #fff;
+//   }
+
+//   &__links {
+//     display: flex;
+//     gap: 2rem;
+
+//     .navbar__link {
+//       font-size: 1.6rem;
+//       color: #fff;
+
+//       &:hover {
+//         color: #a259ff;
+//       }
+//     }
+//   }
+
+//   &__btn {
+//     display: flex;
+//     align-items: center;
+//     gap: 0.5rem;
+//     background-color: #a259ff;
+//     color: #fff;
+//     padding: 1rem 2rem;
+//     border-radius: 1rem;
+//     font-size: 1.6rem;
+//     transition: background-color 0.3s;
+
+//     &:hover {
+//       background-color: #7e30ff;
+//     }
+//   }
+// }
+
+// // Icon umumiy
+// .icon {
+//   font-size: 2rem;
+// }

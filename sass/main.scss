@@ -1,4 +1,5 @@
 // Global styles
+@use "sass:color";
 
 *,
 *::before,
@@ -45,6 +46,9 @@ body {
   background-color: $clr-dark;
   color: $clr-white;
   font-family: $ff-Work-sans;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 section {
   padding-block: 3rem;
@@ -52,12 +56,12 @@ section {
   max-width: 1500px;
   margin-inline: auto;
 }
-
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 /* BUTTONS */
 
 .btn {
@@ -73,7 +77,7 @@ img {
     padding: 2rem 3rem;
 
     &:hover {
-      background-color: darken($color: $clr-primary, $amount: 5%);
+      background-color: color.adjust($clr-primary, $lightness: -10%);
     }
   }
 
@@ -101,6 +105,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
 
   /* KEYINROQ OLIB TASHLASHIMIZ MUMKIN */
 
@@ -112,9 +121,11 @@ img {
   &__container {
     display: flex;
     align-items: center;
-    .navbar__button {
-      display: none;
-    }
+  }
+  &__button {
+    display: none;
+    border: none;
+    background-color: transparent;
   }
 
   &__links {
@@ -144,14 +155,70 @@ img {
     transition: 0.2s;
 
     &:hover {
-      background-color: darken($clr-primary, 7%);
+      background-color: color.adjust($clr-primary, $lightness: -10%);
     }
   }
 }
 
-.hero__btn {
-  display: inline-block;
+.close-btn {
+  color: #fff;
+  font-size: 2.6rem;
+  display: none;
 }
+/*1080px FOR DESKTOP APPLICATION*/
+
+@media (max-width: 1080px) {
+  .navbar {
+    position: relative;
+  }
+
+  .navbar__container {
+    position: absolute;
+    top: 0;
+    right: -50%;
+    width: 40%;
+    height: 100vh;
+    background-color: #3b3b3b;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    z-index: 10000;
+    transition: 0.5s;
+  }
+
+  .navbar__links {
+    flex-direction: column;
+    gap: 5rem;
+    a {
+      font-size: 2.2rem;
+    }
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar .navbar__button {
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+  .navbar__container.opened {
+    right: 0;
+  }
+}
+
+/* HERO SECTION */
 
 .hero {
   display: flex;
@@ -179,10 +246,55 @@ img {
     line-height: 1.6;
   }
 
+  &__btn {
+    display: inline-block;
+  }
+
   &__image {
     flex: 1;
     border-radius: 20px;
     overflow: hidden;
+    position: relative;
+    aspect-ratio: 1/1;
+    &-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: 0.7s;
+
+      &:hover {
+        transform: scale(1.11);
+      }
+    }
+
+    &-overlay {
+      background-color: $clr-medium-gray;
+      width: 100%;
+      padding: 1rem;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  &__overlay-title {
+    font-size: $fs-medium;
+    line-height: 1.4;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__creator {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__creator-name {
+    font-size: $fs-regular;
+    line-height: 1.4;
   }
 
   &__stats {
@@ -207,7 +319,6 @@ img {
     font-weight: 400;
   }
 }
-
 // $fs-small: 1.2rem;
 // $fs-regular: 1.6rem;
 // $fs-medium: 2.2rem;

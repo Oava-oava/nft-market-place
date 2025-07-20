@@ -47,6 +47,9 @@
       <div class="navbar">
         <a href="#"><img src="images/logo.png" alt="logo of the site" /></a>
         <div class="navbar__container">
+          <button class="close-btn">
+            <i class="ph ph-x"></i>
+          </button>
           <ul class="navbar__links">
             <li><a href="#" class="navbar__link">Marketplace</a></li>
             <li><a href="#" class="navbar__link">Rankings</a></li>
@@ -55,11 +58,10 @@
           <a href="#" class="navbar__btn"
             ><i class="icon ph ph-user"></i>Sign Up</a
           >
-
-          <button class="navbar__button">
-            <img src="icons/nav-menu.svg" class="nav-button" />
-          </button>
         </div>
+        <button class="navbar__button open-btn">
+          <img src="icons/nav-menu.svg" class="nav-button" />
+        </button>
       </div>
     </header>
 
@@ -97,10 +99,23 @@
             </div>
           </div>
           <div class="hero__image">
-            <img src="images/hero-img.png" alt="" />
+            <img src="images/hero-img.png" alt="" class="hero__image-img" />
+            <div class="hero__image-overlay">
+              <h5 class="hero__overlay-title">Space walking</h5>
+              <div class="hero__creator">
+                <img
+                  src="images/hero-avatar.png"
+                  alt="Animakid creator of the avatar"
+                  class="hero__creator-avatar"
+                />
+                <span class="hero__creator-name">Animakid</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <script src="main.js"></script>
   </body>
 </html>

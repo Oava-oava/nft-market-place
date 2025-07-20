@@ -25,6 +25,50 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+section {
+  padding-block: 3rem;
+  padding-inline: 6rem;
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* BUTTONS */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.5s;
+}
+.btn__primary {
+  padding: 2rem 3rem;
+}
+.btn__primary:hover {
+  background-color: rgb(147.7138554217, 63.5, 255);
+}
+.btn__secondary {
+  padding: 1.5rem 2rem;
+}
+.btn__tertiary {
+  padding: 1rem 2rem;
+}
+.btn__free {
+  border: 2px solid #a259ff;
+}
+.btn__full {
+  border: 2px solid transparent;
+  background-color: #a259ff;
+}
+
 /* HEADER SECTION */
 /* NAVBAR */
 .navbar {
@@ -33,13 +77,15 @@ body {
   justify-content: space-between;
   /* KEYINROQ OLIB TASHLASHIMIZ MUMKIN */
   padding: 2rem 5rem;
-  max-width: 1280px;
   margin-inline: auto;
   /* ********************************* */
 }
 .navbar__container {
   display: flex;
   align-items: center;
+}
+.navbar__container .navbar__button {
+  display: none;
 }
 .navbar__links {
   display: flex;
@@ -51,6 +97,9 @@ body {
   line-height: 1.4;
   padding: 2rem;
 }
+.navbar__link:hover {
+  color: #a259ff;
+}
 .navbar__btn {
   display: flex;
   background-color: #a259ff;
@@ -59,6 +108,61 @@ body {
   font-size: 1.6rem;
   font-weight: 600;
   border-radius: 20px;
+  transition: 0.2s;
+}
+.navbar__btn:hover {
+  background-color: rgb(141.9993975904, 53.3, 255);
+}
+
+.hero__btn {
+  display: inline-block;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.hero__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: start;
+  justify-content: center;
+}
+.hero__title {
+  font-size: 6.8rem;
+  line-height: 1;
+  font-weight: 600;
+}
+.hero__description {
+  font-size: 2.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.hero__image {
+  flex: 1;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hero__stats {
+  display: flex;
+  gap: 8rem;
+}
+.hero__stat {
+  display: flex;
+  flex-direction: column;
+}
+.hero__stat-number {
+  font-family: "Space Mono", monospace;
+  font-size: 2.8rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+.hero__stat-label {
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 
 /*

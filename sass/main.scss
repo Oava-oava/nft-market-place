@@ -50,7 +50,8 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-section {
+
+.container {
   padding-block: 5rem;
   padding-inline: 6rem;
   max-width: 1500px;
@@ -63,7 +64,9 @@ img {
 }
 
 /* BUTTONS */
-
+.btn_container {
+  display: inline-block;
+}
 .btn {
   display: flex;
   align-items: center;
@@ -75,7 +78,6 @@ img {
   transition: all 0.5s;
   &__primary {
     padding: 2rem 3rem;
-
     &:hover {
       background-color: color.adjust($clr-primary, $lightness: -10%);
     }
@@ -98,8 +100,35 @@ img {
   }
 }
 
+.header__buttonly {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6rem;
+
+  .header___title {
+    font-size: $fs-large-medium;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .header__subtitle {
+    font-size: $fs-medium;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+  .btn_container {
+    align-self: flex-end;
+  }
+}
+
 /* HEADER SECTION */
 /* NAVBAR */
+
+.header-section {
+  max-width: 1800px;
+  margin-inline: auto;
+}
 
 .navbar {
   display: flex;
@@ -400,6 +429,68 @@ img {
         font-weight: 400;
       }
     }
+  }
+}
+
+.creators {
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  &__card {
+    background-color: $clr-medium-gray;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    flex: 1;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__overlay-number {
+    background-color: $clr-dark-gray;
+    padding: 0.5rem 1rem;
+    font-weight: 400;
+    display: flex;
+    border-radius: 100px;
+    background-color: $clr-dark-gray;
+    font-size: $fs-regular;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  &__image {
+    text-align: center;
+    // aspect-ratio: 1/1;
+    img {
+      width: 80%;
+      height: auto;
+      // object-fit: cover;
+      margin: auto;
+    }
+  }
+
+  &__author {
+    font-size: $fs-medium;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  &__sales {
+    color: $clr-light-gray;
+    font-size: $fs-regular;
+    font-weight: 400;
+  }
+
+  &__summ {
+    font-size: $fs-regular;
+    font-family: $ff-space-mono;
   }
 }
 

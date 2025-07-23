@@ -31,7 +31,7 @@ body {
 .container {
   padding-block: 5rem;
   padding-inline: 6rem;
-  max-width: 1800px;
+  max-width: 1350px;
   margin-inline: auto;
 }
 
@@ -434,6 +434,56 @@ img {
   padding: 2rem 2rem;
   font-size: 2.2rem;
   background-color: #3b3b3b;
+}
+
+.discover__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2.5rem;
+}
+.discover__card {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.discover__content {
+  background-color: #3b3b3b;
+  padding: 2rem 3rem 2.5rem 3rem;
+}
+.discover__image img {
+  width: 100%;
+  height: auto;
+}
+.discover__name {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+.discover__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-family: "Space Mono", monospace;
+  margin-bottom: 2rem;
+}
+.discover__info {
+  display: flex;
+  justify-content: space-between;
+}
+.discover__price, .discover__record {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.discover__price-text, .discover__record-name {
+  font-family: "Space Mono", monospace;
+  font-size: 1.2rem;
+  color: #858584;
+}
+.discover__price-num, .discover__record-num {
+  font-family: "Space Mono", monospace;
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 /*

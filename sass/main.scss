@@ -54,7 +54,7 @@ body {
 .container {
   padding-block: 5rem;
   padding-inline: 6rem;
-  max-width: 1800px;
+  max-width: 1350px;
   margin-inline: auto;
 }
 img {
@@ -496,15 +496,11 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
-    
   }
-
-  
 
   &__card {
     overflow: hidden;
     border-radius: 20px;
-
   }
 
   &__card-img {
@@ -513,7 +509,7 @@ img {
     img {
       width: 100%;
       height: auto;
-      transition: .4s;
+      transition: 0.4s;
 
       &:hover {
         transform: scale(1.1);
@@ -525,6 +521,73 @@ img {
     padding: 2rem 2rem;
     font-size: $fs-medium;
     background-color: $clr-medium-gray;
+  }
+}
+
+.discover {
+
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+  }
+
+  &__card {
+    overflow: hidden;
+    border-radius: 20px;
+  }
+
+  &__content {
+    background-color: $clr-medium-gray;
+    padding: 2rem 3rem 2.5rem 3rem;
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__name {
+    font-size: $fs-medium;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-family: $ff-space-mono;
+    margin-bottom: 2rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price,
+  &__record {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__price-text,
+  &__record-name {
+    font-family: $ff-space-mono;
+    font-size: $fs-small;
+    color: #858584;
+  }
+
+  &__price-num,
+  &__record-num {
+    font-family: $ff-space-mono;
+    font-size: $fs-regular;
+    font-weight: 400;
   }
 }
 

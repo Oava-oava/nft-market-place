@@ -98,6 +98,15 @@ img {
     border: 2px solid transparent;
     background-color: $clr-primary;
   }
+  &__full-white {
+    border: 2px solid transparent;
+    background-color: $clr-white;
+    color: #000;
+
+    &:hover {
+      color: #fff;
+    }
+  }
 }
 
 .header__buttonly {
@@ -525,7 +534,6 @@ img {
 }
 
 .discover {
-
   &__cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -588,6 +596,73 @@ img {
     font-family: $ff-space-mono;
     font-size: $fs-regular;
     font-weight: 400;
+  }
+}
+
+.magic-mashroom-section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #caa1ff00, #a259ff),
+    url(../images/magic_mashroom/Magic_mashroom_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  .mashroom {
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+
+    &__content {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 1rem;
+    }
+
+    &__author {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.5rem 2rem;
+      border-radius: 20px;
+      background-color: $clr-medium-gray;
+      margin-bottom: 2rem;
+    }
+
+    &__author-name {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
+    &__name {
+      font-size: 5.1rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+
+    &__auction {
+      background-color: rgba(59, 59, 59, 0.5);
+      // filter: blur(2);
+      padding: 3rem;
+      border-radius: 20px;
+    }
+    &__auction-text {
+      font-size: 1.2rem;
+      line-height: 1.1;
+    }
+
+    &__auction-clock {
+      font-size: $fs-large-medium;
+      font-weight: 700;
+    }
+
+    &__auction-clock-text {
+      font-size: $fs-small;
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 

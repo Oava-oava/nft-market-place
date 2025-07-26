@@ -75,6 +75,14 @@ img {
   border: 2px solid transparent;
   background-color: #a259ff;
 }
+.btn__full-white {
+  border: 2px solid transparent;
+  background-color: #ffffff;
+  color: #000;
+}
+.btn__full-white:hover {
+  color: #fff;
+}
 
 .header__buttonly {
   display: flex;
@@ -484,6 +492,63 @@ img {
   font-family: "Space Mono", monospace;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.magic-mashroom-section {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(202, 161, 255, 0), #a259ff), url(../images/magic_mashroom/Magic_mashroom_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.magic-mashroom-section .mashroom {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+}
+.magic-mashroom-section .mashroom__content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem;
+}
+.magic-mashroom-section .mashroom__author {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: #3b3b3b;
+  margin-bottom: 2rem;
+}
+.magic-mashroom-section .mashroom__author-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.magic-mashroom-section .mashroom__name {
+  font-size: 5.1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.magic-mashroom-section .mashroom__auction {
+  background-color: rgba(59, 59, 59, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+}
+.magic-mashroom-section .mashroom__auction-text {
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+.magic-mashroom-section .mashroom__auction-clock {
+  font-size: 3.8rem;
+  font-weight: 700;
+}
+.magic-mashroom-section .mashroom__auction-clock-text {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 /*
